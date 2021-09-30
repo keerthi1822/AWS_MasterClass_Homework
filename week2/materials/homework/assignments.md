@@ -55,7 +55,16 @@ command:
 
 What can be done to reduce the pricing for S3 when hosting a large number of files?
 
-brief description: `Use binary format (e.g. AVRO) over human readable format (e.g. JSON), Using row-based vs. column based storage.`
+brief description: `Use binary format (e.g. AVRO) over human readable format (e.g. JSON)
+1.Store your data in a compressed format
+2.Evenly distribute S3 objects
+3. Use S3 for hosting static websites
+4. Appropriately tag buckets
+5.  Monitor S3 buckets
+6.  Enable “Lifecycle” feature
+7.  Use Compressible Formats
+8.  Removing Unused S3 Buckets
+9.  Use a Cloud Cost Optimization service`
 
 **Assignment 11:**
 
