@@ -45,7 +45,7 @@ upload: ..\products.json to s3://keerthi-week2/products.json
 **Assignment 9:**
 Write down a brief use case on when S3 could be used for a data engineering assignment:
 
-use case: `?`
+use case: `Amazon S3 is commonly used in AWS Data Engineering for Data Storage from multiple sources because it’s a highly scalable, fast, cost-effective solution. S3 stores data in Objects, which are fundamental entities that consist of data and its metadata. Objects stores pairs where metadata is the description of respective data like Date has Date-Time description`
 
 command:
 
