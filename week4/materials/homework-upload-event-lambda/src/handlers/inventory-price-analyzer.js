@@ -21,22 +21,26 @@ exports.s3PriceAnalyzer = async (event) => {
         console.log(filteredItems);
       })
       .then((filteredItems) => {
-        const respones = filteredItems
-          .map((itemArray) => itemArray)
-          .map((item) =>
-            fetch(
-              `https://hooks.slack.com/services/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`,
-              { text: "Hello, World! " + item }
-            ).then((res) => res.json())
-          );
+        fetch(
+          `https://hooks.slack.com/services/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`,
+          {
+            method: "POST",
+            credentials: "same-origin",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(filteredItems),
+          }
+        );
       })
+
       .catch((err) => {
         console.error("Error calling S3 getObject:", err);
         return Promise.reject(err);
       });
   });
 
-  return Promise.all(respones).then(() => {
+  return Promise.all(response).then(() => {
     console.debug("Complete!");
   });
 };
