@@ -22,7 +22,7 @@ exports.s3PriceAnalyzer = async (event) => {
       })
       .then((filteredItems) => {
         const response = fetch(
-          `https://hooks.slack.com/services/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`,
+          ``,
           {
             method: "POST",
             credentials: "same-origin",
