@@ -21,15 +21,14 @@ exports.s3PriceAnalyzer = async (event) => {
         console.log(filteredItems);
       })
       .then((filteredItems) => {
-        fetch(
-          `https://hooks.slack.com/services/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`,
+        const response = fetch(
+          `https://hooks.slack.com/services/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`,
           {
             method: "POST",
             credentials: "same-origin",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify(filteredItems),
           }
         );
       })
